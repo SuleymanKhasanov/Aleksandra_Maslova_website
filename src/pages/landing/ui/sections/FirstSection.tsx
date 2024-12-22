@@ -1,12 +1,13 @@
 import { Title } from '@/entities/title';
 import styles from './FirstSection.module.css';
-import { HeroImage } from '@/widgets/heroImage';
+
+import { Puzzles } from '@/entities/puzzles';
 
 const FirstSection = () => {
   return (
     <div className={styles.container}>
       <Title />
-      <HeroImage />
+      <Puzzles />
     </div>
   );
 };
