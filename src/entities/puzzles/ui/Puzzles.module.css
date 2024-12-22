@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 455px;
+  height: 700px;
+}
+
+.puzzleTopLeft {
+  position: relative;
+  top: -100px;
+  left: -100px;
+  opacity: 0;
+}
+
+.puzzleTopCenter {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+}
+
+.puzzleTopRight {
+  position: relative;
+  top: -100px;
+  right: -100px;
+  opacity: 0;
+}
+
+.puzzleUpperMidLeft {
+  position: relative;
+  top: -100px;
+  left: -100px;
+  opacity: 0;
+}
+
+.puzzleUpperMidCenter {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+}
+
+.puzzleUpperMidRight {
+  position: relative;
+  right: -100px;
+  opacity: 0;
+}
+
+.puzzleLowMidLeft {
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
+
+.puzzleLowMidCenter {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+}
+
+.puzzleLowMidRight {
+  position: relative;
+  right: -100px;
+  opacity: 0;
+}
+
+.puzzleBottomLeft {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+}
+
+.puzzleBottomCenter {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+}
+
+.puzzleBottomRight {
+  position: relative;
+  right: -100px;
+  bottom: -100px;
+  opacity: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 363px;
+    height: 500px;
+  }
+  .puzzleTopLeft {
+    width: 80px;
+  }
+  .puzzleTopCenter {
+    width: 164px;
+  }
+  .puzzleTopRight {
+    width: 110px;
+  }
+  .puzzleUpperMidLeft {
+    width: 110px;
+  }
+  .puzzleUpperMidCenter {
+    width: 140px;
+  }
+  .puzzleUpperMidRight {
+    width: 110px;
+  }
+  .puzzleLowMidLeft {
+    width: 100px;
+  }
+  .puzzleLowMidCenter {
+    width: 140px;
+  }
+  .puzzleLowMidRight {
+    width: 123px;
+  }
+  .puzzleBottomLeft {
+    width: 130px;
+  }
+  .puzzleBottomCenter {
+    width: 118px;
+  }
+  .puzzleBottomRight {
+    width: 114px;
+  }
+}

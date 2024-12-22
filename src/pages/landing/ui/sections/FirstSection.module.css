@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  /* Сдвигаем последний элемент в начало */
+  .container > :last-child {
+    order: -1; /* Это сделает последний элемент первым */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}

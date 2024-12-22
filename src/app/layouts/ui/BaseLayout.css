@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('../../../shared/assets/fonts/montserrat/MontserratAlternates-Bold.woff')
+      format('woff2'),
+    url('../../../shared/assets/fonts/montserrat/MontserratAlternates-Bold.woff')
+      format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('../../../shared/assets/fonts/montserrat/MontserratAlternates-Regular.woff2')
+      format('woff2'),
+    url('../../../shared/assets/fonts/montserrat/MontserratAlternates-Regular.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Montserrat Alternates', system-ui;
+  color: #000;
+  background-color: #eeedff;
+  font-weight: bold;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}

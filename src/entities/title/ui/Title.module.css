@@ -1,0 +1,24 @@
+.hiddenWord {
+  opacity: 0;
+  position: relative;
+  top: 20px;
+  font-size: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .hiddenWord {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hiddenWord {
+    font-size: 28px;
+  }
+}
