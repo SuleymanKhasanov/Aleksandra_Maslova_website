@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { textContent } from '../assets/textContent';
+import { seoKeywords } from '../assets/textContent';
 import styles from './Title.module.css';
 import gsap from 'gsap';
 
@@ -16,8 +17,27 @@ const Title = () => {
     });
   }, []);
 
+  const getRandomKeywords = (
+    keywords: string[],
+    count: number,
+  ): string[] => {
+    const shuffled = [...keywords].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  };
+
+  const randomKeywords = getRandomKeywords(seoKeywords, 2);
+
   return (
     <div className={styles.container}>
+      <div className={styles.keyWords}>
+        {randomKeywords.map((keyword, index) => (
+          <h1 key={index} className={styles.tags}>
+            #{keyword}
+            {index < randomKeywords.length - 1 ? ' ' : ''}
+          </h1>
+        ))}
+      </div>
+
       {textContent.map((line, lineIndex) => (
         <div className={styles.textLineContainer} key={lineIndex}>
           {line.map((text) =>
