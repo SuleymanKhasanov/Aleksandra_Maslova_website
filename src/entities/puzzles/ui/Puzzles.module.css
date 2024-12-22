@@ -1,150 +1,311 @@
 .container {
   position: relative;
-}
-
-.puzzles {
+  width: 350px;
+  height: 550px;
   display: flex;
-  flex-wrap: wrap;
-  width: 455px;
-  height: 700px;
-}
-
-.imageCard {
-  width: 390px;
-  height: 600px;
-  background-color: #fff;
-  border: 5px solid #9a95ff;
-  transform: perspective(479px) rotateX(0deg) rotateY(-13deg)
-    rotateZ(3deg);
+  margin-top: 20px;
+  transform: perspective(479px) rotateX(0deg) rotateY(-12deg)
+    rotateZ(1deg);
+  border: none;
   border-radius: 30px;
-  overflow: hidden;
-  position: absolute;
-  top: 40px;
-  opacity: 0;
+  margin: 20px;
 }
 
-.imageCard img {
-  width: 100%; /* Изображение займет всю ширину родителя */
-  height: 100%; /* Изображение займет всю высоту родителя */
-  object-fit: cover; /* Сохраняет пропорции, изображение обрежется, чтобы заполнить контейнер */
-  border-radius: inherit; /* Наследует закругленные углы от родителя */
+.box_1,
+.box_2,
+.box_3,
+.box_4,
+.box_5 {
+  display: flex;
+  flex-direction: column;
 }
 
-.puzzleTopLeft {
+.puzzlePiece_0 {
+  border-top-left-radius: 30px;
   position: relative;
-  top: -100px;
-  left: -100px;
-  opacity: 0;
+  width: 85px;
 }
 
-.puzzleTopCenter {
+.puzzlePiece_1 {
   position: relative;
-  top: -100px;
-  opacity: 0;
+  top: -16px;
+  width: 70px;
 }
 
-.puzzleTopRight {
+.puzzlePiece_2 {
   position: relative;
-  top: -100px;
-  right: -100px;
-  opacity: 0;
+  top: -32px;
+  width: 85px;
 }
 
-.puzzleUpperMidLeft {
+.puzzlePiece_3 {
   position: relative;
-  top: -100px;
-  left: -100px;
-  opacity: 0;
+  top: -47px;
+  width: 70px;
 }
 
-.puzzleUpperMidCenter {
+.puzzlePiece_4 {
   position: relative;
-  top: -100px;
-  opacity: 0;
+  top: -65px;
+  width: 70px;
 }
 
-.puzzleUpperMidRight {
+.puzzlePiece_5 {
   position: relative;
-  right: -100px;
-  opacity: 0;
+  top: -81px;
+  width: 84px;
 }
 
-.puzzleLowMidLeft {
+.puzzlePiece_6 {
   position: relative;
-  left: -100px;
-  opacity: 0;
+  top: -98px;
+  width: 83px;
 }
 
-.puzzleLowMidCenter {
+.puzzlePiece_7 {
   position: relative;
-  top: -100px;
-  opacity: 0;
+  top: -120px;
+  width: 83px;
+  border-bottom-left-radius: 30px;
 }
 
-.puzzleLowMidRight {
+.box_2 {
   position: relative;
-  right: -100px;
-  opacity: 0;
+  top: 0;
+  left: -16px;
 }
 
-.puzzleBottomLeft {
+.puzzlePiece_8 {
   position: relative;
-  bottom: -100px;
-  opacity: 0;
+  width: 85px;
 }
 
-.puzzleBottomCenter {
+.puzzlePiece_9 {
   position: relative;
-  bottom: -100px;
-  opacity: 0;
+  top: -15px;
+  width: 85px;
+  left: -16px;
 }
 
-.puzzleBottomRight {
+.puzzlePiece_10 {
   position: relative;
-  right: -100px;
-  bottom: -100px;
-  opacity: 0;
+  top: -30px;
+  width: 68px;
 }
 
-@media screen and (max-width: 500px) {
-  .puzzles {
-    width: 363px;
-    height: 500px;
-  }
-  .puzzleTopLeft {
-    width: 80px;
-  }
-  .puzzleTopCenter {
-    width: 164px;
-  }
-  .puzzleTopRight {
-    width: 110px;
-  }
-  .puzzleUpperMidLeft {
-    width: 110px;
-  }
-  .puzzleUpperMidCenter {
-    width: 140px;
-  }
-  .puzzleUpperMidRight {
-    width: 110px;
-  }
-  .puzzleLowMidLeft {
-    width: 100px;
-  }
-  .puzzleLowMidCenter {
-    width: 140px;
-  }
-  .puzzleLowMidRight {
-    width: 123px;
-  }
-  .puzzleBottomLeft {
-    width: 130px;
-  }
-  .puzzleBottomCenter {
-    width: 118px;
-  }
-  .puzzleBottomRight {
-    width: 114px;
-  }
+.puzzlePiece_11 {
+  position: relative;
+  top: -44px;
+  left: -14px;
+  width: 82px;
+}
+
+.puzzlePiece_12 {
+  position: relative;
+  top: -59px;
+  width: 100px;
+  left: -16px;
+}
+
+.puzzlePiece_13 {
+  position: relative;
+  top: -74px;
+  width: 68px;
+}
+
+.puzzlePiece_14 {
+  position: relative;
+  top: -90px;
+  left: -1px;
+  width: 69px;
+}
+
+.puzzlePiece_15 {
+  position: relative;
+  top: -115px;
+  left: -1px;
+  width: 83px;
+}
+
+.box_3 {
+  position: relative;
+  top: 0;
+  left: -47px;
+}
+
+.puzzlePiece_16 {
+  position: relative;
+  width: 68px;
+}
+
+.puzzlePiece_17 {
+  position: relative;
+  top: -14px;
+  width: 100px;
+  left: -16px;
+}
+
+.puzzlePiece_18 {
+  position: relative;
+  top: -30px;
+  width: 100px;
+  left: -16px;
+}
+
+.puzzlePiece_19 {
+  position: relative;
+  top: -44px;
+  left: -15px;
+  width: 82px;
+}
+
+.puzzlePiece_20 {
+  position: relative;
+  top: -58px;
+  width: 68px;
+}
+
+.puzzlePiece_21 {
+  position: relative;
+  top: -73px;
+  left: -16px;
+  width: 83px;
+}
+
+.puzzlePiece_22 {
+  position: relative;
+  top: -88px;
+  left: -16px;
+  width: 97px;
+}
+
+.puzzlePiece_23 {
+  position: relative;
+  top: -110px;
+  left: -2px;
+  width: 68px;
+}
+
+.box_4 {
+  position: relative;
+  top: 0;
+  left: -67px;
+}
+
+.puzzlePiece_24 {
+  position: relative;
+  width: 98px;
+  left: -27px;
+}
+
+.puzzlePiece_25 {
+  position: relative;
+  top: -14px;
+  width: 68px;
+  left: -11px;
+}
+
+.puzzlePiece_26 {
+  position: relative;
+  top: -29px;
+  width: 85px;
+  left: -12px;
+}
+
+.puzzlePiece_27 {
+  position: relative;
+  top: -44px;
+  left: -28px;
+  width: 85px;
+}
+
+.puzzlePiece_28 {
+  position: relative;
+  top: -60px;
+  width: 85px;
+  left: -28px;
+}
+
+.puzzlePiece_29 {
+  position: relative;
+  top: -76px;
+  left: -28px;
+  width: 85px;
+}
+
+.puzzlePiece_30 {
+  position: relative;
+  top: -94px;
+  left: -13px;
+  width: 68px;
+}
+
+.puzzlePiece_31 {
+  position: relative;
+  top: -114px;
+  left: -29px;
+  width: 80px;
+}
+
+.box_5 {
+  position: relative;
+  top: 0;
+  left: -87px;
+}
+
+.puzzlePiece_32 {
+  position: relative;
+  width: 68px;
+  left: -22px;
+  border-top-right-radius: 30px;
+}
+
+.puzzlePiece_33 {
+  position: relative;
+  top: -14px;
+  width: 83px;
+  left: -37px;
+}
+
+.puzzlePiece_34 {
+  position: relative;
+  top: -28px;
+  width: 66px;
+  left: -20px;
+}
+
+.puzzlePiece_35 {
+  position: relative;
+  top: -41px;
+  left: -37px;
+  width: 84px;
+}
+
+.puzzlePiece_36 {
+  position: relative;
+  top: -56px;
+  width: 85px;
+  left: -37px;
+}
+
+.puzzlePiece_37 {
+  position: relative;
+  top: -71px;
+  left: -37px;
+  width: 85px;
+}
+
+.puzzlePiece_38 {
+  position: relative;
+  top: -88px;
+  left: -38px;
+  width: 86px;
+}
+
+.puzzlePiece_39 {
+  position: relative;
+  top: -120px;
+  left: -44px;
+  width: 91px;
+  border-bottom-right-radius: 30px;
 }
