@@ -1,12 +1,12 @@
-import FirstSection from './sections/FirstSection';
-import Header from './sections/Header';
+import { Navigation } from '@/features/navigation';
+import { FirstSection } from '@/widgets/firstSection';
 
 const Landing = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Navigation />
       <FirstSection />
-    </div>
+    </>
   );
 };
 
