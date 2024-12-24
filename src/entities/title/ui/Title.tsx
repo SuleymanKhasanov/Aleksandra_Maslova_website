@@ -1,29 +1,14 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { textContent } from '../assets/textContent';
 import { seoKeywords } from '../assets/textContent';
 import styles from './Title.module.css';
-import gsap from 'gsap';
+import { getRandomKeywords } from '../utils/getRandomKeywords';
+import { useTextAnimate } from '../utils/useTextAnimate';
 
 const Title = () => {
   const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
-  useEffect(() => {
-    gsap.to(wordRefs.current, {
-      opacity: 1,
-      top: 0,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: 'back.inOut',
-    });
-  }, []);
-
-  const getRandomKeywords = (
-    keywords: string[],
-    count: number,
-  ): string[] => {
-    const shuffled = [...keywords].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, count);
-  };
+  useTextAnimate(wordRefs);
 
   const randomKeywords = getRandomKeywords(seoKeywords, 2);
 

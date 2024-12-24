@@ -1,66 +1,20 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { puzzlePieces } from '../assets';
-import styles from './Puzzles.module.css';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import styles from './ImagePuzzles.module.css';
+import { useAnimatePuzzles } from '../utils/useAnimatePuzzles';
+import { useMouseTiltEffect } from '../utils/useMouseTiltEffect';
 
-const Puzzles = () => {
-  // Создаем массив для хранения рефов с типом HTMLImageElement
+const ImagePuzzles = () => {
   const imgRefs = Array.from({ length: 40 }, () =>
     useRef<HTMLImageElement | null>(null),
   );
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      imgRefs.map((ref) => ref.current), // Извлекаем значения current для каждого рефа
-      {
-        opacity: 0,
-        x: () => `${(Math.random() * 2 - 1) * 50}vh`,
-        y: () => `${(Math.random() * 2 - 1) * 50}vh`,
-        rotation: () => `${(Math.random() * 2 - 1) * 360}`,
-      },
-      {
-        opacity: 1,
-        x: `0px`,
-        y: `0px`,
-        stagger: 0.1,
-        duration: 0.5,
-        ease: 'back.inOut',
-        rotation: 0,
-      },
-    );
-    gsap.to(containerRef.current, {
-      border: '4px solid #9a95ff',
-      delay: 4,
-      duration: 1,
-      ease: 'back.inOut',
-    });
-  }, []);
+  useAnimatePuzzles(imgRefs, containerRef);
 
-  const [transformStyle, setTransformStyle] = useState('');
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-
-    const { left, top, width, height } =
-      containerRef.current.getBoundingClientRect();
-
-    const relativeX = (e.clientX - left) / width;
-    const relativeY = (e.clientY - top) / height;
-
-    const tiltY = (relativeY - 0.5) * 10;
-    const tiltX = (relativeX - 0.5) * -10;
-
-    const newTransform = `perspective(479px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1,1,1)`;
-
-    setTransformStyle(newTransform);
-  };
-
-  const handleMouseLeave = () => {
-    setTransformStyle('');
-  };
+  const { transformStyle, handleMouseMove, handleMouseLeave } =
+    useMouseTiltEffect(containerRef);
 
   return (
     <div
@@ -324,4 +278,4 @@ const Puzzles = () => {
   );
 };
 
-export default Puzzles;
+export default ImagePuzzles;
