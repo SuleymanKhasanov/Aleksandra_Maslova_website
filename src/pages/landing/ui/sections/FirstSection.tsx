@@ -1,6 +1,5 @@
 import { Title } from '@/entities/title';
 import styles from './FirstSection.module.css';
-
 import { Puzzles } from '@/entities/puzzles';
 
 const FirstSection = () => {
